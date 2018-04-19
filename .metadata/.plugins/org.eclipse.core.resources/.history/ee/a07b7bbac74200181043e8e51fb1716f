@@ -1,0 +1,25 @@
+package springsample.service;
+
+import javax.transaction.Transactional;
+import org.springframework.stereotype.Service;
+
+import antlr.collections.List;
+import springsample.dao.TaskRepository;
+import springsample.model.Task;
+
+
+@Service
+@Transactional
+public class TaskService {
+	
+	private TaskRepository taskRepository;
+
+	public TaskService(TaskRepository taskRepository) {
+		this.taskRepository = taskRepository;
+	}
+	
+	public List<Task> findAll(){
+		
+	}
+	
+}

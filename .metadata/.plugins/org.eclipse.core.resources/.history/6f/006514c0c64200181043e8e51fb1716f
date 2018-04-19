@@ -1,0 +1,5 @@
+package springsample.service;
+
+public class TaskService {
+
+}

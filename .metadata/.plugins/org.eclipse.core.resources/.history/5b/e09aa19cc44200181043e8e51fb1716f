@@ -1,0 +1,5 @@
+package springsample.model;
+
+public class Task {
+
+}

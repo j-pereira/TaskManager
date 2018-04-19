@@ -1,0 +1,9 @@
+package springsample.model;
+
+import javax.persistence.Table;
+
+
+@Table(name="t_tasks")
+public class Task {
+
+}
