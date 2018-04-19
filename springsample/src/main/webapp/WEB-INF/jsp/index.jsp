@@ -74,33 +74,35 @@
 			<div class="container">
 				<h3 class="text-center p-4">Manage Task</h3>
 				<hr>
-				<form class="form-horizontal px-5" method="POST" action="save-task">
-					<input type="hidden" name="id" value="${task.id}"/>
-					<div class="form-group row px-5">
-						<label class="control-label col-md-2">Name:</label>
-						<div class="col-md-7">
-							<input type="text" class="form-control" name="nome" value="${task.nome}"/>
+				<div class="container mx-5">
+					<form class="form-horizontal px-5" method="POST" action="save-task">
+						<input type="hidden" name="id" value="${task.id}"/>
+						<div class="form-group row px-5">
+							<label class="control-label col-md-2">Name:</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" name="nome" value="${task.nome}"/>
+							</div>
 						</div>
-					</div>
-					<div class="form-group row px-5">
-						<label class="control-label col-md-2">Description:</label>
-						<div class="col-md-7">
-							<input type="text" class="form-control" name="description" value="${task.description}"/>
+						<div class="form-group row px-5">
+							<label class="control-label col-md-2">Description:</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" name="description" value="${task.description}"/>
+							</div>
 						</div>
-					</div>
-					<div class="form-group row px-5">
-						<label class="control-label col-md-2">Finished:</label>
-						<div class="col-md-7 row">
-							<input type="radio" class="col-sm-1" name="finished" value="true"/>
-							<div class="col-sm-2">Yes</div>
-							<input type="radio" class="col-sm-1" name="finished" value="false" checked/>
-							<div class="col-sm-2">No</div>
+						<div class="form-group row px-5">
+							<label class="control-label col-md-2">Finished:</label>
+							<div class="col-md-7 row">
+								<input type="radio" class="col-sm-1" name="finished" value="true" <c:if test="${task.finished == true}">checked</c:if>/>
+								<div class="col-sm-2">Yes</div>
+								<input type="radio" class="col-sm-1" name="finished" value="false" <c:if test="${task.finished == false}">checked</c:if>/>
+								<div class="col-sm-2">No</div>
+							</div>
 						</div>
-					</div>
-					<div class="form-group px-5">
-						<input type="submit" class="btn btn-primary" value="Save"/>
-					</div>						
-				</form>
+						<div class="form-group px-5">
+							<input type="submit" class="btn btn-primary" value="Save"/>
+						</div>						
+					</form>
+				</div>
 			</div>
 		</c:when>
 				
