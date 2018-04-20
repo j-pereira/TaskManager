@@ -2,6 +2,7 @@ package springsample.service;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,9 +27,6 @@ public class TaskService {
 		for(Task task : taskRepository.findAll()){
 			tasks.add(task);
 		}
-		
-		Collections.sort(tasks, (o1, o2) -> o1.compareTo(o2));
-		
 		return tasks;
 	}
 	

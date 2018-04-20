@@ -94,7 +94,7 @@
 							<div class="col-md-7 row">
 								<input type="radio" class="col-sm-1" name="finished" value="true" <c:if test="${task.finished == true}">checked</c:if>/>
 								<div class="col-sm-2">Yes</div>
-								<input type="radio" class="col-sm-1" name="finished" value="false" <c:if test="${task.finished == false}">checked</c:if>/>
+								<input type="radio" class="col-sm-1" name="finished" value="false" <c:if test="${task.finished == false || task.finished == null}">checked</c:if>/>
 								<div class="col-sm-2">No</div>
 							</div>
 						</div>

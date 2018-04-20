@@ -1,7 +1,6 @@
 package springsample.model;
 
 
-
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +12,7 @@ import javax.persistence.TemporalType;
 
 
 @Entity(name="tasks")
-public class Task implements Comparable<Task>{
+public class Task {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -73,14 +72,6 @@ public class Task implements Comparable<Task>{
 		return "Task [id=" + id + ", nome=" + nome + ", description=" + description + ", dateCreated=" + dateCreated
 				+ ", finished=" + finished + "]";
 	}
-
-
-	@Override
-	public int compareTo(Task o) {
-		return Integer.compare(this.getId(),  o.getId());
-	}
-	
-	
 	
 		
 }
